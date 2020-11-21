@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>membuat form validation</title>
+    <style>
+        body{
+            background: #3498db;
+            font-family: sans-serif;
+}
+ 
+h2 {
+  color: #fff;
+  text-align: center;
+}
+ 
+.login {
+  padding: 1em;
+  margin: 2em auto;
+  width: 17em;
+  background: #fff;
+  border-radius: 3px;
+}
+ 
+label {
+  font-size: 10pt;
+  color: #555;
+}
+ 
+input[type="text"],
+input[type="email"],
+input[type="time"],
+input[type="text"],
+input[type="number"],
+textarea {
+  padding: 8px;
+  width: 95%;
+  background: #efefef;
+  border: 0;
+  font-size: 10pt;
+  margin: 6px 0px;
+}
+ 
+.tombol {
+  background: #3498db;
+  color: #fff;
+  border: 0;
+  padding: 5px 8px;
+}
+    </style>
+</head>
+<body>
+    <h2>Ticket masuk Puncak</h2>
+    <div class="login">
+        <form action ="#" method="POST" onsubmit="validasi()">
+            <div>
+                <label>Nama Pelanggan:</label>
+                <input type="text" name="name" id="nama" />
+            </div>
+            <div>
+                <label>Email Lengkap</label>
+                <input type="email" name="email" id="email" placeholder="user@example.com" required>
+            </div>
+            <div>
+                <label> Jam Keberangkatan </label>
+                <input type="time" name="waktu" required>
+            </div>
+            <div>
+                <label>Tujuan Keberangkatan</label>
+                <input type="text" name="tujuan Keberangkatan" id="tujuan" />
+            </div>
+            <div>
+                <label>Jumlah Tiket</label>
+                <input type="number" min="1" max="10" name="jumlah tiket" placeholder="jumlah tiket">
+            </div>
+            <div>
+				<input type="submit" value="Login" class="tombol">
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+	function validasi() {
+		var Nama  = document.getElementById("Nama").value;
+		var Email = document.getElementById("Email").value;
+		var Jam  = document.getElementById("Jam ").value;
+        var Tujuan  = document.getElementById("Tujuan").value;
+        var Jumlah = document.getElementById("Jumlah").value;
+		if (nama!= "" && Email!="" && Jam!="" && Tujuan!="" && Jumlah!="") {
+			return true;
+		}else{
+			alert('Anda harus mengisi data dengan lengkap !');
+		}
+	}
+</script>
+</html>
